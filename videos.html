@@ -4,52 +4,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Education Videos</title>
+<title>Education News Videos</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f7fc;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#eef3ff;
+    color:#222;
 }
 
 header{
-    background:linear-gradient(90deg,#004aad,#007bff);
+    background:linear-gradient(135deg,#004aad,#008cff);
     color:white;
     text-align:center;
+    padding:25px 15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size:32px;
+    font-weight:700;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
     padding:15px;
 }
 
-.video-box{
+.card{
     background:white;
-    margin:15px;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:15px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
 }
 
-h2{
-    margin-top:0;
-    color:#004aad;
+.card h2{
+    background:#004aad;
+    color:white;
+    padding:12px;
+    text-align:center;
+    font-size:22px;
 }
 
-iframe{
+.video-container{
+    position:relative;
     width:100%;
-    height:250px;
+    padding-bottom:56.25%; /* 16:9 Full YouTube Ratio */
+    height:0;
+}
+
+.video-container iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     border:none;
-    border-radius:10px;
 }
 
 .back-btn{
     display:block;
-    width:150px;
-    margin:20px auto;
+    width:200px;
     text-align:center;
-    padding:10px;
+    margin:25px auto;
+    padding:12px;
     background:#004aad;
     color:white;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#00307a;
 }
 </style>
 </head>
@@ -60,31 +96,35 @@ iframe{
     <h1>📚 Education News Videos</h1>
 </header>
 
-<div class="video-box">
-    <h2>ARY Education News</h2>
-    <iframe
-    src="https://www.youtube.com/embed/ZUtrecOUAbQ"
-    allowfullscreen>
-    </iframe>
-</div>
+<div class="container">
 
-<div class="video-box">
-    <h2>GEO Education News</h2>
-    <iframe
-    src="https://www.youtube.com/embed/5gQNi6B-9i8"
-    allowfullscreen>
-    </iframe>
-</div>
+    <div class="card">
+        <h2>ARY Education News</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ZUtrecOUAbQ"
+            allowfullscreen></iframe>
+        </div>
+    </div>
 
-<div class="video-box">
-    <h2>BOL Education News</h2>
-    <iframe
-    src="https://www.youtube.com/embed/5gQNi6B-9i8"
-    allowfullscreen>
-    </iframe>
+    <div class="card">
+        <h2>GEO Education News</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/5gQNi6B-9i8"
+            allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>BOL Education News</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/5gQNi6B-9i8"
+            allowfullscreen></iframe>
+        </div>
+    </div>
+
 </div>
 
 <a href="index.html" class="back-btn">🏠 Back Home</a>
 
 </body>
-  </html>
+</html>
