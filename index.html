@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G.H.S.S C.S.S NEWS</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#f4f6f9;
 }
 
 header{
-background:#0056b3;
+background:linear-gradient(135deg,#004aad,#007bff);
 color:white;
-padding:20px;
+padding:30px;
 text-align:center;
 }
 
+header h1{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.teacher{
+background:gold;
+color:black;
+padding:12px;
+font-weight:bold;
+font-size:18px;
+border-radius:10px;
+margin:15px auto;
+max-width:700px;
+}
+
+.developer{
+margin-top:10px;
+font-size:16px;
+}
+
 nav{
-background:#003d80;
-padding:10px;
+background:#002b6b;
+padding:15px;
 text-align:center;
 }
 
@@ -33,8 +59,24 @@ font-weight:bold;
 }
 
 .hero{
-padding:40px;
+padding:30px;
 text-align:center;
+background:white;
+margin:20px;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero h2{
+color:#004aad;
+margin-bottom:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:28px;
+margin:25px 0;
+color:#004aad;
 }
 
 .cards{
@@ -47,24 +89,54 @@ padding:20px;
 
 .card{
 background:white;
-width:280px;
+width:300px;
 padding:20px;
 border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+box-shadow:0 0 15px rgba(0,0,0,0.1);
 text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card h3{
+color:#004aad;
+margin-bottom:10px;
+}
+
+.card p{
+margin-bottom:15px;
 }
 
 .card a{
+background:#004aad;
+color:white;
+padding:10px 20px;
 text-decoration:none;
-color:#0056b3;
-font-weight:bold;
+border-radius:8px;
+display:inline-block;
+}
+
+.news-box{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-box h2{
+color:#004aad;
+margin-bottom:10px;
 }
 
 footer{
-background:#0056b3;
+background:#002b6b;
 color:white;
 text-align:center;
-padding:15px;
+padding:20px;
 margin-top:30px;
 }
 </style>
@@ -73,8 +145,19 @@ margin-top:30px;
 <body>
 
 <header>
-<h1>G.H.S.S C.S.S NEWS</h1>
-<p>Education News Portal</p>
+
+<h1>🎓 G.H.S.S C.S.S NEWS</h1>
+
+<div class="teacher">
+🌟 G.H.S.S C.S.S Most Respect Teacher Is Sajad Sahab 🌟
+</div>
+
+<p>Latest Education News, Board Exams, Scholarships & School Updates</p>
+
+<div class="developer">
+Developed by Hasnain Ali
+</div>
+
 </header>
 
 <nav>
@@ -86,40 +169,55 @@ margin-top:30px;
 </nav>
 
 <div class="hero">
-<h2>Welcome to G.H.S.S C.S.S NEWS</h2>
-<p>Latest Educational News, Exams & Scholarships</p>
+<h2>Welcome Students</h2>
+<p>
+Get Latest Education News, Board Exam Updates,
+Scholarships Information and School Activities.
+</p>
 </div>
+
+<h2 class="section-title">🔥 Latest Updates</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Education Videos</h3>
-<p>Latest Education News Videos</p>
+<h3>📺 Education Videos</h3>
+<p>Watch Latest Education News Videos</p>
 <a href="videos.html">Open</a>
 </div>
 
 <div class="card">
-<h3>Board Exams</h3>
-<p>Exam Dates & Updates</p>
+<h3>📚 Board Exams</h3>
+<p>Check Exam Dates & Updates</p>
 <a href="exams.html">Open</a>
 </div>
 
 <div class="card">
-<h3>Scholarships</h3>
-<p>Latest Scholarships</p>
+<h3>🎓 Scholarships</h3>
+<p>Latest Scholarships For Students</p>
 <a href="scholarships.html">Open</a>
 </div>
 
 <div class="card">
-<h3>School News</h3>
-<p>Holidays & Timings</p>
+<h3>🏫 School News</h3>
+<p>School Holidays & Timings</p>
 <a href="school-news.html">Open</a>
 </div>
 
 </div>
 
+<div class="news-box">
+<h2>📢 Breaking News</h2>
+<p>
+Welcome to G.H.S.S C.S.S NEWS.
+All educational updates will be published here.
+Stay connected for latest news.
+</p>
+</div>
+
 <footer>
-© 2026 G.H.S.S C.S.S NEWS | Developed by Hasnain Ali
+© 2026 G.H.S.S C.S.S NEWS<br>
+Developed by Hasnain Ali
 </footer>
 
 </body>
