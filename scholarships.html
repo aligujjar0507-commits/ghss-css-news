@@ -1,19 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Scholarships</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarships Portal</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#eef2f7,#dbeafe);
+min-height:100vh;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+text-align:center;
+padding:30px 15px;
+}
+
+header h1{
+font-size:28px;
+}
+
+/* CONTAINER */
+.container{
+max-width:800px;
+margin:30px auto;
+padding:20px;
+}
+
+/* CARD */
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+margin-bottom:20px;
+}
+
+/* LIST */
+ul{
+list-style:none;
+}
+
+li{
+background:#f1f5f9;
+margin:10px 0;
+padding:12px;
+border-radius:10px;
+border-left:5px solid #2563eb;
+font-weight:600;
+transition:0.2s;
+}
+
+li:hover{
+transform:scale(1.02);
+background:#e0f2fe;
+}
+
+/* NOTE BOX */
+.note{
+background:#fff3cd;
+border-left:6px solid #ffcc00;
+padding:15px;
+border-radius:10px;
+margin-top:15px;
+font-weight:bold;
+}
+
+/* BUTTON */
+a{
+display:inline-block;
+margin-top:15px;
+background:#2563eb;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+a:hover{
+background:#1e3a8a;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Scholarship News</h1>
+<header>
+<h1>🎓 Scholarship News Portal</h1>
+<p>Latest Scholarships for Students</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Available Scholarships</h2>
 
 <ul>
-<li>Honhaar Scholarship Open</li>
-<li>PEEF Scholarship Open</li>
-<li>HEC Scholarship Applications</li>
+<li>Honhaar Scholarship (Open)</li>
+<li>PEEF Scholarship (Open)</li>
+<li>HEC Need Based Scholarship (Open)</li>
 </ul>
 
-<a href="index.html">Back Home</a>
+<div class="note">
+📢 Remark: All the above scholarships are currently active and students can apply online before the deadline.
+</div>
+
+<div class="note">
+📌 Continuing Scholarships (Ongoing):
+<br><br>
+✔ Honhaar Scholarship Program<br>
+✔ PEEF Scholarships for Punjab Students<br>
+✔ HEC Need-Based Financial Aid<br>
+✔ Other Government Merit Scholarships
+</div>
+
+<a href="index.html">⬅ Back to Home</a>
+
+</div>
+
+</div>
 
 </body>
-</html>
+  </html>
