@@ -10,53 +10,64 @@ body{
     margin:0;
     padding:0;
     font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    background:linear-gradient(135deg,#0f172a,#1e40af,#2563eb);
     text-align:center;
     color:white;
 }
 
 .container{
-    margin-top:80px;
-    padding:20px;
+    padding:40px 20px;
 }
 
 h1{
     font-size:50px;
     font-weight:bold;
     text-shadow:3px 3px 10px rgba(0,0,0,0.5);
+    margin-bottom:20px;
 }
 
 .location-box{
-    margin:30px auto;
+    margin:20px auto;
     width:90%;
-    max-width:700px;
+    max-width:800px;
     background:white;
     color:#222;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(255,255,255,0.3);
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(255,255,255,0.3);
 }
 
 .location-text{
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
     color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.info{
+    font-size:22px;
+    line-height:1.8;
+    font-weight:bold;
+    color:#333;
+    margin:20px 0;
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    padding:15px 30px;
+    padding:15px 35px;
     font-size:20px;
     text-decoration:none;
     color:white;
     background:#28a745;
-    border-radius:10px;
-    transition:0.3s;
+    border-radius:12px;
+    font-weight:bold;
 }
 
-.btn:hover{
-    transform:scale(1.05);
+.footer{
+    margin-top:30px;
+    font-size:16px;
+    opacity:0.9;
 }
 </style>
 </head>
@@ -64,18 +75,32 @@ h1{
 <body>
 
 <div class="container">
+
     <h1>📍 School Address</h1>
 
     <div class="location-box">
-        <p class="location-text">
-            School Location Here
-        </p>
+
+        <div class="location-text">
+            Government Higher Secondary School Chowk Sarwar Shaheed
+        </div>
+
+        <div class="info">
+            📌 Chowk Sarwar Shaheed<br>
+            🛣️ Road: Kot Addu Road<br>
+            🏙️ District: Muzaffargarh, Punjab, Pakistan
+        </div>
 
         <a class="btn" href="https://maps.app.goo.gl/hvwmraAZBf16innWA" target="_blank">
             Open School Location
         </a>
+
     </div>
+
+    <div class="footer">
+        Developed by Hasnain Ali
+    </div>
+
 </div>
 
 </body>
-  </html>
+</html>
