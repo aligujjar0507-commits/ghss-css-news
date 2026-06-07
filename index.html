@@ -1,240 +1,159 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-<meta name="google-site-verification" content="gp5qNBx5AYrPOM5dw2Tlln1Bg25dCLldkUW_qUyHjPU" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Government Higher Secondary School Chowk Sarwar Shaheed Portal</title>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Government Higher Secondary School Chowk Sarwar Shaheed Portal</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+@keyframes zoomHero {
+    from{
+        transform:scale(1.08);
+    }
+    to{
+        transform:scale(1);
+    }
 }
 
 body{
-background:#f4f6f9;
+    background:#0b0b0b;
+    color:white;
+    font-family:'Poppins',sans-serif;
 }
 
 /* HEADER */
 header{
-background:linear-gradient(135deg,#0f172a,#1e40af,#2563eb);
-color:white;
-padding:30px;
-text-align:center;
+    background:linear-gradient(135deg,#000,#111,#1a1a1a);
+    text-align:center;
+    padding:50px 20px;
+    animation:fadeUp 1s ease;
 }
 
 header h1{
-font-size:28px;
-line-height:1.5;
-margin-bottom:15px;
+    font-size:3rem;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
-/* TEACHER BOX */
-.teacher{
-background:gold;
-color:black;
-padding:12px;
-font-weight:bold;
-font-size:18px;
-border-radius:10px;
-margin:15px auto;
-max-width:800px;
-}
-
-/* DEVELOPER */
-.developer{
-margin-top:8px;
-font-size:14px;
-font-weight:bold;
-opacity:0.9;
-}
-
-/* NAV */
+/* NAVBAR */
 nav{
-background:#002b6b;
-padding:15px;
-text-align:center;
+    background:rgba(0,0,0,0.95);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin:10px;
-font-weight:bold;
+    color:white;
+    text-decoration:none;
+    padding:18px;
+    display:inline-block;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e50914;
+    transform:translateY(-3px);
 }
 
 /* HERO */
 .hero{
-padding:30px;
-text-align:center;
-background:white;
-margin:20px;
-border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+    animation:zoomHero 1.5s ease;
+    text-align:center;
+    padding:100px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+    background-size:cover;
+    background-position:center;
 }
 
+.hero h2{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+}
+
+/* SECTION TITLE */
 .section-title{
-text-align:center;
-font-size:28px;
-margin:25px 0;
-color:#004aad;
+    text-align:center;
+    margin:60px 0 30px;
+    font-size:2.2rem;
 }
 
 /* CARDS */
 .cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:20px;
 }
 
 .card{
-background:white;
-width:300px;
-padding:20px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,0.1);
-text-align:center;
+    background:#181818;
+    border-radius:18px;
+    padding:25px;
+    transition:.4s;
+    animation:fadeUp 1s ease;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 15px 35px rgba(229,9,20,.4);
 }
 
 .card h3{
-color:#004aad;
-margin-bottom:10px;
-}
-
-.card p{
-margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .card a{
-background:#004aad;
-color:white;
-padding:10px 20px;
-text-decoration:none;
-border-radius:8px;
-display:inline-block;
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 22px;
+    border-radius:30px;
+    background:#e50914;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
 }
 
-/* BREAKING NEWS SPECIAL STYLE */
+.card a:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(229,9,20,.7);
+}
+
+/* BREAKING NEWS */
 .breaking-title{
-color:#d10000;
-font-size:22px;
-margin-bottom:10px;
-font-weight:bold;
+    color:#ff3b3b;
+    animation:pulse 1.5s infinite;
 }
 
-.news-text{
-font-size:16px;
-line-height:1.6;
-color:#222;
+@keyframes pulse{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:.5;
+    }
 }
 
 /* FOOTER */
 footer{
-background:#002b6b;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
+    background:#000;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    color:#aaa;
 }
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>
-𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝗛𝗶𝗴𝗵𝗲𝗿 𝗦𝗲𝗰𝗼𝗻𝗱𝗮𝗿𝘆 𝗦𝗰𝗵𝗼𝗼𝗹
-<br>
-𝗖𝗵𝗼𝘄𝗸 𝗦𝗮𝗿𝘄𝗮𝗿 𝗦𝗵𝗮𝗵𝗲𝗲𝗱 𝗣𝗼𝗿𝘁𝗮𝗹
-</h1>
-
-<div class="teacher">
-G.H.S.S C.S.S Most Respected Teacher is Sajad Sahab
-</div>
-
-<p>
-Latest Education News, Board Exams, Scholarships & School Updates
-</p>
-
-<div class="developer">
-Developed by Hasnain Ali
-</div>
-</header>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="videos.html">Videos</a>
-<a href="exams.html">Exams</a>
-<a href="scholarships.html">Scholarships</a>
-<a href="School Address.html">📍 School Address</a>
-</nav>
-
-<div class="hero">
-<h2>Welcome Students</h2>
-<p>
-Get Latest Education News, Board Exam Updates,
-Scholarships Information and School Activities.
-</p>
-</div>
-
-<h2 class="section-title">Latest Updates</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Education Videos</h3>
-<p>Watch Latest Education News Videos</p>
-<a href="videos.html">Open</a>
-</div>
-
-<div class="card">
-<h3>Board Exams</h3>
-<p>Check Exam Dates & Updates</p>
-<a href="exams.html">Open</a>
-</div>
-
-<div class="card">
-<h3>Scholarships</h3>
-<p>Latest Scholarships For Students</p>
-<a href="scholarships.html">Open</a>
-</div>
-
-  <div class="card">
-<h3>📍 School Address</h3>
-<p>View School Location and Google Maps Navigation</p>
-<a href="School Address.html">Open</a>
-  </div>
-  
-<!-- BREAKING NEWS -->
-<div class="card">
-<h3 class="breaking-title">Breaking News</h3>
-<p class="news-text">
-All First Year students will receive their roll number slips on 10 June 2026.
-</p>
-</div>
-
-</div>
-
-<footer>
-© 2026 Government Higher Secondary School Chowk Sarwar Shaheed Portal
-<br><br>
-Developed by Hasnain Ali
-</footer>
-
-</body>
-  </html>
