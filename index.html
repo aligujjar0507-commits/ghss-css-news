@@ -26,8 +26,6 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* Scroll Bar */
-
 ::-webkit-scrollbar{
 width:8px;
 }
@@ -40,8 +38,6 @@ background:#111;
 background:#2563eb;
 border-radius:20px;
 }
-
-/* Animations */
 
 @keyframes fadeUp{
 from{
@@ -63,48 +59,56 @@ opacity:.6;
 }
 }
 
-/* Header */
+/* Header Fixed */
 
 header{
-background:
-linear-gradient(
+background:linear-gradient(
 135deg,
 #020617,
 #0f172a,
 #1e3a8a
 );
 
-padding:60px 20px;
+min-height:55vh;
+padding:25px 15px 20px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-animation:fadeUp .8s ease;
+
+animation:fadeUp .35s ease-out;
 }
 
 header h1{
-font-size:36px;
+font-size:28px;
 font-weight:800;
-line-height:1.6;
+line-height:1.4;
+margin-bottom:10px;
 }
 
 .teacher{
 background:gold;
 color:black;
-padding:14px;
-font-size:18px;
+padding:12px;
+font-size:17px;
 font-weight:700;
 border-radius:12px;
 max-width:850px;
-margin:20px auto;
+margin:15px auto;
 }
 
 header p{
-margin-top:10px;
-font-size:18px;
+margin-top:8px;
+font-size:16px;
+line-height:1.6;
 }
 
 .developer{
-margin-top:12px;
+margin-top:8px;
 font-weight:600;
-font-size:15px;
+font-size:14px;
 color:#93c5fd;
 }
 
@@ -115,97 +119,109 @@ background:#111827;
 position:sticky;
 top:0;
 z-index:999;
-padding:18px;
+padding:15px;
 text-align:center;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 12px;
+margin:0 8px;
 font-weight:600;
-padding:10px 15px;
+padding:10px 14px;
 border-radius:10px;
 transition:.25s;
+display:inline-block;
 }
 
 nav a:hover{
 background:#2563eb;
 }
 
-nav a:active{
-transform:scale(.92);
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+min-height:50vh;
+padding:20px 12px;
+}
+
+header h1{
+font-size:24px;
+}
+
+.teacher{
+font-size:16px;
+padding:10px;
+}
+
+header p{
+font-size:15px;
+}
+
+.developer{
+font-size:13px;
+}
+
+nav a{
+margin:4px;
+font-size:14px;
+}
+
 }
 
 </style>
 </head>
 
 <body>
+
 <header>
 
-<div style="height:15px;"></div>
-
 <h1>
-
 Government Higher Secondary School
-
 <br>
-
 Chowk Sarwar Shaheed Portal
-
 </h1>
 
 <div class="teacher">
-
 Most Respected Teacher
-
 <br>
-
 Sajad Sahab
-
 </div>
 
 <p>
-
 Latest Education News, Board Exams,
-
 Scholarships & School Updates
-
 </p>
 
 <div class="developer">
-
 Developed by Hasnain Ali
-
 </div>
 
 </header>
 
-
-</header>
 <nav>
 
-<a href="index.html"> Home</a>
+<a href="index.html">Home</a>
 
-<a href="videos.html"> Videos</a>
+<a href="videos.html">Videos</a>
 
-<a href="exams.html"> Exams</a>
+<a href="exams.html">Exams</a>
 
-<a href="scholarships.html"> Scholarships</a>
+<a href="scholarships.html">Scholarships</a>
 
-<a href="School Address.html"> School Address</a>
+<a href="School Address.html">School Address</a>
 
-</nav>
-
-<style>
+  </nav>
+  <style>
 
 /* Hero Section */
 
 .hero{
 
-margin:25px;
-
-padding:90px 20px;
+margin:20px;
+padding:70px 20px;
 
 border-radius:25px;
 
@@ -224,12 +240,11 @@ background-position:center;
 
 box-shadow:0 10px 40px rgba(0,0,0,.5);
 
-animation:fadeUp 1s ease;
-
+animation:fadeUp .5s ease;
 }
 
 .hero h2{
-font-size:50px;
+font-size:42px;
 font-weight:800;
 margin-bottom:15px;
 }
@@ -277,7 +292,6 @@ transition:.25s;
 cursor:pointer;
 
 -webkit-tap-highlight-color:transparent;
-
 }
 
 .card:hover{
@@ -288,31 +302,21 @@ scale(1.03);
 
 box-shadow:
 0 15px 35px rgba(37,99,235,.35);
-
 }
 
 .card:active{
-
 transform:scale(.95);
-
 }
 
 .card h3{
-
 font-size:24px;
-
 margin-bottom:12px;
-
 }
 
 .card p{
-
 color:#cbd5e1;
-
 line-height:1.8;
-
 margin-bottom:18px;
-
 }
 
 .card a{
@@ -330,12 +334,37 @@ text-decoration:none;
 border-radius:30px;
 
 font-weight:600;
-
 }
 
 .card a:hover{
-
 background:#3b82f6;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero{
+padding:50px 15px;
+margin:15px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.card{
+width:100%;
+max-width:350px;
+}
 
 }
 
@@ -346,12 +375,10 @@ background:#3b82f6;
 <h2>Welcome Students</h2>
 
 <p>
-
 Get Latest Education News,
 Board Exam Updates,
 Scholarships Information
 and School Activities.
-
 </p>
 
 </div>
@@ -363,36 +390,29 @@ Latest Updates
 <div class="cards">
 
 <div class="card">
-<h3> Education Videos</h3>
-<p>
-Watch Latest Education News Videos
-</p>
+<h3>Education Videos</h3>
+<p>Watch Latest Education News Videos</p>
 <a href="videos.html">Open</a>
 </div>
 
 <div class="card">
-<h3> Board Exams</h3>
-<p>
-Check Exam Dates & Updates
-</p>
+<h3>Board Exams</h3>
+<p>Check Exam Dates & Updates</p>
 <a href="exams.html">Open</a>
 </div>
 
 <div class="card">
-<h3> Scholarships</h3>
-<p>
-Latest Scholarships For Students
-</p>
+<h3>Scholarships</h3>
+<p>Latest Scholarships For Students</p>
 <a href="scholarships.html">Open</a>
 </div>
 
 <div class="card">
-<h3> School Address</h3>
-<p>
-View School Location and Google Maps Navigation
-</p>
+<h3>School Address</h3>
+<p>View School Location and Google Maps Navigation</p>
 <a href="School Address.html">Open</a>
 </div>
+
 <div class="card" style="
 width:100%;
 max-width:1000px;
@@ -410,7 +430,9 @@ margin-bottom:15px;
 text-transform:uppercase;
 animation:pulse 1.5s infinite;
 ">
+
 🚨 BREAKING NEWS 🚨
+
 </h3>
 
 <p style="
@@ -419,8 +441,10 @@ font-weight:600;
 line-height:1.8;
 color:#fff;
 ">
+
 All First Year Students will receive their
 Roll Number Slips on 10 June 2026.
+
 </p>
 
 <marquee
@@ -432,13 +456,14 @@ font-size:18px;
 font-weight:700;
 color:#fff;
 ">
+
 ⚡ IMPORTANT UPDATE • IMPORTANT UPDATE • IMPORTANT UPDATE ⚡
+
 </marquee>
 
 </div>
 
 </div>
-
 <footer style="
 background:#000;
 text-align:center;
@@ -473,11 +498,11 @@ card.style.transform="translateY(30px)";
 
 setTimeout(()=>{
 
-card.style.transition=".6s ease";
+card.style.transition=".45s ease";
 card.style.opacity="1";
 card.style.transform="translateY(0)";
 
-},index*120);
+},index*100);
 
 });
 
@@ -489,7 +514,7 @@ document.querySelectorAll(".card").forEach(card=>{
 
 card.addEventListener("touchstart",function(){
 
-this.style.transform="scale(.96)";
+this.style.transform="scale(.97)";
 
 });
 
