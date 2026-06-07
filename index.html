@@ -2,222 +2,446 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GHSS Portal | Professional Edition</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="gp5qNBx5AYrPOM5dw2Tlln1Bg25dCLldkUW_qUyHjPU">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Government Higher Secondary School Chowk Sarwar Shaheed Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* ================= RESET ================= */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0a0f1c;
+background:#0a0a0a;
 color:#fff;
 overflow-x:hidden;
 }
 
-/* ================= BACKGROUND (LIGHTWEIGHT) ================= */
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at top,#1d4ed8 0%,transparent 40%),
-radial-gradient(circle at bottom,#9333ea 0%,transparent 40%);
-opacity:.15;
-z-index:-1;
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+width:8px;
 }
 
-/* ================= SCROLLBAR ================= */
-::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{
+background:#111;
+}
+
 ::-webkit-scrollbar-thumb{
-background:#3b82f6;
-border-radius:10px;
+background:#2563eb;
+border-radius:20px;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ANIMATIONS */
+
 @keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%,100%{
+opacity:1;
+}
+50%{
+opacity:.5;
+}
 }
 
 @keyframes glow{
-0%,100%{text-shadow:0 0 10px rgba(59,130,246,.3);}
-50%{text-shadow:0 0 20px rgba(59,130,246,.6);}
+0%,100%{
+box-shadow:0 0 20px rgba(37,99,235,.3);
+}
+50%{
+box-shadow:0 0 35px rgba(37,99,235,.9);
+}
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
+
 header{
-padding:60px 20px;
+background:
+linear-gradient(
+135deg,
+#020617,
+#0f172a,
+#1e3a8a
+);
+
+padding:50px 20px;
 text-align:center;
-background:linear-gradient(135deg,#0f172a,#111827);
-border-bottom:1px solid rgba(255,255,255,.08);
-animation:fadeUp .8s ease;
+
+animation:fadeUp 1s ease;
 }
 
 header h1{
 font-size:34px;
+line-height:1.6;
 font-weight:800;
-line-height:1.4;
-animation:glow 3s infinite;
 }
 
 .teacher{
-margin:20px auto;
-max-width:800px;
-padding:12px;
-border:1px solid gold;
-color:gold;
-border-radius:10px;
-font-weight:600;
-}
+background:gold;
+color:#000;
 
-.developer{
-margin-top:10px;
-font-size:13px;
-opacity:.7;
-}
-
-/* ================= NAV ================= */
-nav{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(0,0,0,.5);
-backdrop-filter:blur(10px);
-text-align:center;
 padding:14px;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
 
-nav a{
-color:#fff;
-margin:0 12px;
-text-decoration:none;
-font-weight:600;
-transition:.2s;
-}
+font-size:18px;
+font-weight:700;
 
-nav a:hover{
-color:#3b82f6;
-}
+border-radius:12px;
 
-/* ================= HERO ================= */
-.hero{
-margin:25px;
-padding:90px 20px;
-text-align:center;
-border-radius:20px;
-background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
-background-size:cover;
-background-position:center;
-animation:fadeUp 1s ease;
-}
+max-width:850px;
 
-.hero h2{
-font-size:44px;
+margin:20px auto;
+
 animation:glow 3s infinite;
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
+header p{
+margin-top:10px;
 font-size:17px;
-opacity:.9;
-line-height:1.6;
 }
 
-/* ================= SECTION TITLE ================= */
-.section-title{
-text-align:center;
-font-size:30px;
-margin:40px 0;
-font-weight:700;
-}
-
-/* ================= CARDS ================= */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:22px;
-padding:20px;
-}
-
-.card{
-width:300px;
-padding:22px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.1);
-border-radius:16px;
-text-align:center;
-transition:.3s;
-animation:fadeUp .8s ease;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(59,130,246,.25);
-}
-
-.card h3{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.card p{
-color:#cbd5e1;
+.developer{
+margin-top:12px;
+font-weight:600;
 font-size:14px;
 }
 
-/* ================= BUTTON ================= */
-.card a{
-display:inline-block;
-margin-top:12px;
-padding:10px 20px;
-background:#3b82f6;
-border-radius:20px;
+/* NAVBAR */
+
+nav{
+
+background:rgba(0,0,0,.9);
+
+backdrop-filter:blur(10px);
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+padding:18px;
+
+text-align:center;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+nav a{
+
 color:#fff;
+
 text-decoration:none;
+
+margin:0 12px;
+
 font-weight:600;
-transition:.2s;
+
+transition:.3s;
+
+display:inline-block;
+
+}
+
+nav a:hover{
+
+color:#60a5fa;
+
+transform:translateY(-3px);
+
+}
+
+/* HERO */
+
+.hero{
+
+margin:25px;
+
+padding:90px 20px;
+
+border-radius:25px;
+
+text-align:center;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.75)
+),
+
+url('https://images.unsplash.com/photo-1523240795612-9a054b0db644');
+
+background-size:cover;
+
+background-position:center;
+
+animation:fadeUp 1.2s ease;
+
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+
+}
+
+.hero h2{
+
+font-size:50px;
+
+margin-bottom:15px;
+
+font-weight:800;
+
+}
+
+.hero p{
+
+max-width:800px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:34px;
+
+margin:40px 0;
+
+font-weight:700;
+
+}
+  /* CARDS SECTION */
+
+.cards{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:25px;
+
+padding:25px;
+
+}
+
+.card{
+
+width:310px;
+
+background:#181818;
+
+border-radius:20px;
+
+padding:25px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.4s;
+
+animation:fadeUp 1s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.card:hover::before{
+
+left:100%;
+
+}
+
+.card:hover{
+
+transform:
+translateY(-12px)
+scale(1.04);
+
+box-shadow:
+0 20px 45px rgba(37,99,235,.35);
+
+}
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+color:#fff;
+
+}
+
+.card p{
+
+color:#cbd5e1;
+
+line-height:1.7;
+
+margin-bottom:18px;
+
+}
+
+.card a{
+
+display:inline-block;
+
+padding:12px 24px;
+
+background:#2563eb;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
 }
 
 .card a:hover{
-background:#2563eb;
+
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px rgba(37,99,235,.7);
+
 }
 
-/* ================= BREAKING ================= */
-.breaking{
+/* BREAKING NEWS */
+
+.breaking-title{
+
 color:#ff4d4d;
-font-weight:700;
+
+font-size:24px;
+
+font-weight:800;
+
+animation:pulse 1.5s infinite;
+
 }
 
-/* ================= FOOTER ================= */
+.news-text{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#fff;
+
+}
+
+/* FOOTER */
+
 footer{
+
+background:#000;
+
 text-align:center;
-padding:30px;
+
+padding:35px;
+
 margin-top:50px;
+
 border-top:1px solid rgba(255,255,255,.08);
-font-size:13px;
-opacity:.8;
+
+color:#bdbdbd;
+
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
+
 @media(max-width:768px){
-.hero h2{font-size:30px;}
-.card{width:100%;}
-nav a{margin:0 8px;}
+
+header h1{
+
+font-size:26px;
+
+}
+
+.hero{
+
+padding:60px 20px;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
 }
 
 </style>
@@ -226,62 +450,215 @@ nav a{margin:0 8px;}
 <body>
 
 <header>
-<h1>Government Higher Secondary School<br>Portal System</h1>
-<div class="teacher">Most Respected Teacher: Sajad Sahab</div>
-<div class="developer">Developed by Hasnain Ali</div>
+
+<h1>
+
+𝗚𝗼𝘃𝗲𝗿𝗻𝗺𝗲𝗻𝘁 𝗛𝗶𝗴𝗵𝗲𝗿 𝗦𝗲𝗰𝗼𝗻𝗱𝗮𝗿𝘆 𝗦𝗰𝗵𝗼𝗼𝗹
+
+<br>
+
+𝗖𝗵𝗼𝘄𝗸 𝗦𝗮𝗿𝘄𝗮𝗿 𝗦𝗵𝗮𝗵𝗲𝗲𝗱 𝗣𝗼𝗿𝘁𝗮𝗹
+
+</h1>
+
+<div class="teacher">
+G.H.S.S C.S.S Most Respected Teacher is Sajad Sahab
+</div>
+
+<p>
+Latest Education News, Board Exams,
+Scholarships & School Updates
+</p>
+
+<div class="developer">
+Developed by Hasnain Ali
+</div>
+
 </header>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="videos.html">Videos</a>
+
 <a href="exams.html">Exams</a>
+
 <a href="scholarships.html">Scholarships</a>
-<a href="School Address.html">Address</a>
+
+<a href="School Address.html">
+📍 School Address
+</a>
+
 </nav>
 
 <div class="hero">
+
 <h2>Welcome Students</h2>
-<p>Official school portal with updates, exams, scholarships and educational information.</p>
+
+<p>
+
+Get Latest Education News,
+
+Board Exam Updates,
+
+Scholarships Information
+
+and School Activities.
+
+</p>
+
 </div>
 
-<h2 class="section-title">Latest Updates</h2>
+<h2 class="section-title">
+
+Latest Updates
+
+</h2>
 
 <div class="cards">
 
 <div class="card">
+
 <h3>Education Videos</h3>
-<p>Learning content available</p>
-<a href="videos.html">Open</a>
+
+<p>
+
+Watch Latest Education News Videos
+
+</p>
+
+<a href="videos.html">
+
+Open
+
+</a>
+
 </div>
 
 <div class="card">
+
 <h3>Board Exams</h3>
-<p>Exam schedule updates</p>
-<a href="exams.html">Open</a>
-</div>
 
+<p>
+
+Check Exam Dates & Updates
+
+</p>
+
+<a href="exams.html">
+
+Open
+
+</a>
+
+</div>
 <div class="card">
+
 <h3>Scholarships</h3>
-<p>Student opportunities</p>
-<a href="scholarships.html">Open</a>
+
+<p>
+
+Latest Scholarships For Students
+
+</p>
+
+<a href="scholarships.html">
+
+Open
+
+</a>
+
 </div>
 
 <div class="card">
-<h3>School Address</h3>
-<p>Find location easily</p>
-<a href="School Address.html">Open</a>
+
+<h3>📍 School Address</h3>
+
+<p>
+
+View School Location and
+
+Google Maps Navigation
+
+</p>
+
+<a href="School Address.html">
+
+Open
+
+</a>
+
 </div>
 
 <div class="card">
-<h3 class="breaking">Breaking News</h3>
-<p>Roll number slips will be issued on 10 June 2026.</p>
+
+<h3 class="breaking-title">
+
+Breaking News
+
+</h3>
+
+<p class="news-text">
+
+All First Year students will
+receive their roll number slips
+on 10 June 2026.
+
+</p>
+
 </div>
 
 </div>
 
 <footer>
-© 2026 GHSS Portal | Professional Lightweight Edition
+
+© 2026 Government Higher Secondary School
+Chowk Sarwar Shaheed Portal
+
+<br><br>
+
+Developed by Hasnain Ali
+
 </footer>
+
+<script>
+
+/* Smooth card animation */
+
+const cards =
+document.querySelectorAll('.card');
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity='1';
+
+entry.target.style.transform='translateY(0)';
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity='0';
+
+card.style.transform='translateY(40px)';
+
+card.style.transition='all .8s ease';
+
+observer.observe(card);
+
+});
+
+</script>
 
 </body>
 </html>
